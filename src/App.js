@@ -1,25 +1,14 @@
 import './App.css';
 import React from 'react';
+import Header from './Components/Header/Header';
+import CounterValue from './Components/CounterValue/CounterValue';
 
 class App extends React.Component {
-  state={
-      setCount: 0,
-  }
   render(){
     return (
       <div className="App">
-        <h1>Counter App</h1>
-        <h2>{this.state.setCount}</h2>
-        <button onClick={()=>{
-          this.setState({
-            setCount: this.state.setCount+1,
-          })
-        }}>+</button>
-        <button onClick={()=>{
-          this.setState({
-            setCount: this.state.setCount-1,
-          })
-        }}>-</button>
+       <Header/>
+        <CounterValue/>      
       </div>
     );
   }
