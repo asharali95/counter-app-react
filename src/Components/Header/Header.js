@@ -1,11 +1,12 @@
-import React from 'react'
+import React,{memo} from 'react'
 
-const Header = () => {
+const Header = ({content}) => {
+    console.log("header rendered")
     return (
         <div>
-            <h2>Counter App</h2>
+            <h2>{content}</h2>
         </div>
     )
 }
 
-export default Header
+export default memo(Header)
